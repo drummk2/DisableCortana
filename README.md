@@ -18,7 +18,7 @@ This script can be used on the command line in the following way.
 .\DisableCortana.ps1 -RemovePackage
 ```
 
-N.B. This script may require you to temporarily set your execution policy to "Bypass" in order to run it. This can be done with the following code. Note that all execution policy commands must be run in and administrator Powershell instance.
+N.B. This script may require you to temporarily set your execution policy to "Bypass" in order to run it. This can be done with the following code. Note that all execution policy commands must be run in an administrator Powershell instance.
 ```Powershell
 Set-ExecutionPolicy Bypass
 ```
