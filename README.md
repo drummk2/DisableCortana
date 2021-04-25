@@ -26,10 +26,10 @@ Set-ExecutionPolicy Bypass
 You can then set the execution policy back to "Restricted" or "Remote Signed" with the following code.
 ```Powershell
 Set-ExecutionPolicy Restricted
+```
 
 *or*
 
+```Powershell
 Set-ExecutionPolicy RemoteSigned
-
-Set-ExecutionPolicy
 ```
