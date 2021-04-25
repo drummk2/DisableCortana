@@ -32,11 +32,13 @@ param (
 
 # Disable Cortana by adding a key to the registry stating that Cortana is not allowed on the machine in question.
 if ($DisableInRegistry -Or $All) {
+  Write-Host "Disabling Cortana in registry..." 
   New-Item -ErrorAction SilentlyContinue -Name 'Windows Search' -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\' | Out-Null
   New-ItemProperty -ErrorAction SilentlyContinue -Name 'AllowCortana' -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search' -PropertyType DWORD -Value '0' | Out-Null
 }
 
 # Remove the Cortana package from this machine using 'Remove-AppxPackage'.
-if ($RemovePackage -Or $All) {M
-  Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppPackage -AllUsers -Confirm
+if ($RemovePackage -Or $All) {
+  Write-Host "Uninstalling Cortana Appx package for user: $([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)..."
+  Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage -Confirm
 }
