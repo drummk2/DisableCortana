@@ -17,3 +17,13 @@ This script can be used on the command line in the following way.
 ```Powershell
 .\DisableCortana.ps1 -RemovePackage
 ```
+
+N.B. This script may require you to temporarily set your execution policy to "Bypass" in order to run it. This can be done with the following code.
+```Powershell
+Set-ExecutionPolicy Bypass
+```
+
+You can then set the execution policy back to restricted with the following code.
+```Powershell
+Set-ExecutionPolicy Restricted
+```
