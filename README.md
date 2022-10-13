@@ -1,5 +1,5 @@
 # DisableCortana
-Lately, it seems like quite a few people are trying to figure out ways to remove/disable Cortana on their machines. This Powershell script allows one to do exactly that by disabling it directly in the registry or by removing the Cortana Appx package from their system entirely.
+Lately, it seems like quite a few people are trying to figure out ways to remove or disable Cortana on their machines. This Powershell script allows one to do exactly that by disabling it directly in the registry or by removing the Cortana Appx package from their system entirely.
 
 This script can be used on the command line in the following way.
 
